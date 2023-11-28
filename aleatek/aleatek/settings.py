@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'collaborateurs',
     'entreprise',
     'adresse',
+    'drf_yasg',
     'phonenumber_field',
     'django.contrib.sites',
     'allauth',
@@ -103,17 +104,18 @@ WSGI_APPLICATION = 'aleatek.wsgi.application'
 SITE_ID =1
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+}"""
 
-# DATABASES = {
-#     'default': dj_database_url.parse("postgres://aleatek_db_b881_user:vGVAcauLiLCewnYMnPzrDjzuis7QSUkt@dpg-cki4itce1qns73epals0-a.frankfurt-postgres.render.com/aleatek_db_b881")
-# }
+DATABASES = {
+     'default': dj_database_url.parse("postgres://aleatek_db_9g7f_user:J7K6Xzqs2e6gOjnjcj0v0nyL9BYZoLkY@dpg-clj6b6cm411"
+                                      "s73at5lgg-a.oregon-postgres.render.com/aleatek_db_9g7f")
+ }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
