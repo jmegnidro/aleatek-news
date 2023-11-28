@@ -112,9 +112,9 @@ DATABASES = {
     }
 }"""
 
+DATABASES_URLS = "postgres://aleatek_db_9g7f_user:J7K6Xzqs2e6gOjnjcj0v0nyL9BYZoLkY@dpg-clj6b6cm411s73at5lgg-a.oregon-postgres.render.com/aleatek_db_9g7f"
 DATABASES = {
-     'default': dj_database_url.parse("postgres://aleatek_db_9g7f_user:J7K6Xzqs2e6gOjnjcj0v0nyL9BYZoLkY@dpg-clj6b6cm411"
-                                      "s73at5lgg-a.oregon-postgres.render.com/aleatek_db_9g7f")
+     'default': dj_database_url.parse(DATABASES_URLS)
  }
 
 # Password validation
