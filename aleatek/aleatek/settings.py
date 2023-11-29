@@ -1,5 +1,6 @@
 from pathlib import Path
 import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -12,7 +13,7 @@ SECRET_KEY = 'django-insecure-b6_k4bay75%gsb84cqe%-gj1*-d#7q4$tb^e+kds=)6su!tz6i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1:8000', '127.0.0.1', 'localhost', 'localhost:3000', 'aleatek-d7a43.web.app', '192.168.1.170', '192.168.1.170:8000', 'aleatek-news.onrender.com', 'aleatek-news.onrender.com']
+ALLOWED_HOSTS = ['localhost:3000', 'aleatek-news.onrender.com', ]
 
 # Application definition
 
@@ -101,7 +102,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'aleatek.wsgi.application'
 
-SITE_ID =1
+SITE_ID = 1
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 """
@@ -114,8 +115,8 @@ DATABASES = {
 
 DATABASES_URLS = "postgres://aleatek_db_9g7f_user:J7K6Xzqs2e6gOjnjcj0v0nyL9BYZoLkY@dpg-clj6b6cm411s73at5lgg-a.oregon-postgres.render.com/aleatek_db_9g7f"
 DATABASES = {
-     'default': dj_database_url.parse(DATABASES_URLS)
- }
+    'default': dj_database_url.parse(DATABASES_URLS)
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -169,13 +170,13 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000', 'https://aleatek-d7a43.web.app'
+    'http://localhost:3000'
 )
 
-CSRF_TRUSTED_ORIGINS = ['http://*.localhost:3000', 'https://aleatek-d7a43.web.app']
+CSRF_TRUSTED_ORIGINS = ['http://*.localhost:3000', ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', 'https://aleatek-d7a43.web.app'
+    'http://localhost:3000'
 ]
 
 CORS_EXPOSE_HEADERS = [
